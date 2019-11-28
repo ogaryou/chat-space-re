@@ -1,0 +1,25 @@
+.main-header
+  .main-header__left-box
+    %h2.main-header__left-box__current-group{"data-group_id":"6931"}
+      ggg
+    %ul.main-header__left-box__member-list
+      Member：
+      %li.main-header__left-box__member-list__member hhh
+  %input.main-header__edit-btn{type:"submit",value:"Edit"}
+    
+.messages
+  .message{"data-message_id":"14618"}
+    .message__upper-info
+      %p.message__upper-info__talker hhh
+      %p.message__upper-info__date 2019/11/24(Sun) 12:04:30
+    %p.message__text ggggg
+.form
+  %form#new_message.new_message{"accept-charset":"UTF-8", action: "/groups/6931/messages", enctype: "multipart/form-data", method: "post"}
+    %input{name: "utf8", type:"hidden", value:"✓"}/
+    %input{name: "authenticity_token", type:"hidden", value: "aJzZCBWAx431aULStCx1+KzYnJzU9I7l7skFJBUe9WXgIP+Mo2DnMwIkGI96hBcGmKXXUvfGpObkxZ5DGyL3iw=="}/
+    .input-box
+      %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+      %label.input-box__image{for: "message_image"}
+        %i.fa.fa-image
+        %input#message_image.input-box__image__file{name: "message[image]", type: "file"}/
+    %input.submit-btn{"data-disable-with":"Send", name:"commit", type:"submit", value: "Send"}/
