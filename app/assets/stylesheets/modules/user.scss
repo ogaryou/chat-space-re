@@ -11,9 +11,9 @@
       float: left;
       width: 50%;
     }
-    &:after {
+    &amp;:after {
       clear: both;
-      content: "";
+      content: &quot;&quot;;
       display: block;
     }
   }
@@ -25,7 +25,7 @@
       font-size: 40px;
       font-weight: 200;
 
-      &:after {
+      &amp;:after {
         content: '';
         display: block;
         width: 60px;
@@ -101,7 +101,7 @@
     .field_with_errors {
       position: relative;
 
-      &:after {
+      &amp;:after {
         content: '';
         display: block;
         position: absolute;
