@@ -1,4 +1,4 @@
-<pre><code>
+
 .account-page {
   &__inner {
     width: 980px;
@@ -12,9 +12,9 @@
       float: left;
       width: 50%;
     }
-    &amp;amp;:after {
+    &:after {
       clear: both;
-      content: &amp;quot;&amp;quot;;
+      content:"" ;
       display: block;
     }
   }
@@ -26,7 +26,7 @@
       font-size: 40px;
       font-weight: 200;
 
-      &amp;amp;:after {
+      &:after {
         content: '';
         display: block;
         width: 60px;
@@ -102,7 +102,7 @@
     .field_with_errors {
       position: relative;
 
-      &amp;amp;:after {
+      &:after {
         content: '';
         display: block;
         position: absolute;
@@ -141,4 +141,3 @@
   }
 }
 
-</code></pre>
