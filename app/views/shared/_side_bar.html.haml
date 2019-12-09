@@ -10,10 +10,12 @@
         %li.side-header__box__menu__edit-user
           = link_to edit_user_path(current_user) do
             %i.fa.fa-cog
-  .groups           
-  - current_user.groups.each do |group|                             
-    .groups
-      = link_to group_messages_path(group) do
-        .group
-          %p.group__group-name ggg
-          %p.group__latest-message ggggg
+
+  .groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。

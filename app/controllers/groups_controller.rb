@@ -6,7 +6,8 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
-  end  
+  end
+    
   def index
   end
 
