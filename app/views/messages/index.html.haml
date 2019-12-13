@@ -1,3 +1,18 @@
 .wrapper
   = render "shared/side_bar"
-  = render "main_chat"
+
+  .main-chat
+    .main-chat__header
+      .main-chat__header__group
+        .main-chat__header__group__name
+          = @group.name
+        .main-chat__header__group__member
+          Member : 
+          - @group.users.each do |user|
+            = user.name
+      .main-chat__header__edit
+        = link_to edit_group_path(@group) do
+          Edit
+
+    = render "main_chat"
+
