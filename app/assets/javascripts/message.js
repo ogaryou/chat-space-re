@@ -78,10 +78,10 @@ $(function(){
         var insertHTML = '';
         messages.forEach(function (message) {
         insertHTML = buildHTML(message);
-        $('.message').append(insertHTML);
-        $('.message').animate({ scrollTop: $('.message')[0].scrollHeight}, 'fast');
-        })
       })
+      $('.message').append(insertHTML);
+      $('.message').animate({ scrollTop: $('.message')[0].scrollHeight}, 'fast');
+    })
       .fail(function() {
         alert('自動更新に失敗しました');
       });
