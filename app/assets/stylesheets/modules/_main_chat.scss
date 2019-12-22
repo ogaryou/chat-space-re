@@ -1,16 +1,14 @@
 .main-chat{
   float: left;
   width: calc(100vw - 300px);
-  height: calc(100vh - 90px);
-  overflow: scroll;
   &__header{
     border-bottom: solid 1px #eeeeee;
     height: 100px;
     padding: 0 40px;
+    overflow: scroll;
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
-    overflow: scroll;
     &__group{
       margin-top: 35px;
       &__name{
@@ -31,13 +29,14 @@
       text-align: center;
     }
   }
-.message{
+.messages{
   height: calc(100vh - 190px);
   overflow: scroll;
   padding: 0px 40px;
   background-color: #fafafa;
   .main-chat__message{
     margin-top: 46px;
+    
     &__box{
       display: flex;
       justify-content: flex-start;
@@ -64,10 +63,6 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: calc(100vw - 300px);
     &__message {
       border: none;
       float: left;
