@@ -20,31 +20,31 @@ $(function(){
            </p>
          </div>
        </div>`
-   } else if (message.content) {
+   } else if (message.image) {
      var html =
       `<div class="main-chat__message" data-message-id=${message.id}>
          <div class="main-chat__message__box">
            <div class="main-chat__message__box__name">
              ${message.user_name}
            </div>
-           <div class="main-chat__message__box__data">
+           <div class="main-chat__message__box__date">
              ${message.created_at}
            </div>
          </div>
          <div class="main-chat__message__text">
-           <p class="lower-message__content">
-             ${message.content}
-           </p>
+         <p class = "lower-message__image">
+         <img src=${message.image} >
+         </p>
          </div>
        </div>`
-   } else if (message.image) {
+   } else if (message.content) {
     var html =
     `<div class="main-chat__message" data-message-id=${message.id}>
        <div class="main-chat__message__box">
          <div class="main-chat__message__box__name">
            ${message.user_name}
          </div>
-         <div class="main-chat__message__box__data">
+         <div class="main-chat__message__box__date">
            ${message.created_at}
          </div>
        </div>
@@ -57,7 +57,7 @@ $(function(){
    };   
      return html;
    };
- }
+ 
  $('#new_message').on('submit', function(e){
    e.preventDefault();
    var formData = new FormData(this);
@@ -81,7 +81,7 @@ $(function(){
        alert('error');
      });
      return false;
-  });
+  })
 
   var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
